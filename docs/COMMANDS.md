@@ -4,19 +4,19 @@ Mọi lệnh chạy **từ thư mục gốc của repo** (thư mục chứa `REA
 
 Lệnh của bài lab đọc mã số, địa chỉ CVAT, tên đăng nhập và thư mục dữ liệu từ `configs/lab.ini`, nên **giống hệt nhau trên Windows và macOS**. Chỉ các việc quanh nó (kích hoạt môi trường, mở file, chụp màn hình) là khác; những chỗ đó có hai khối lệnh.
 
-| Việc | Lệnh (cả hai hệ điều hành) | Lệnh tắt macOS |
-|---|---|---|
-| Xem 10 frame, kiểm dữ liệu, không nối CVAT | `python scripts/lab.py dry` | `make dry` |
-| Tạo task `D13-<MÃ SỐ>` | `python scripts/lab.py task` | `make task` |
-| Tạo task chung của vòng hiệu chuẩn | `python scripts/lab.py task --code <MÃ CHUNG>` | |
-| Đóng gói 10 frame để tạo task bằng tay ([CVAT_SETUP.md](CVAT_SETUP.md) mục 7) | `python scripts/lab.py bundle` | `make bundle` |
-| Xuất bảng A | `python scripts/lab.py report` | `make report` |
-| Xuất bảng A của vòng hiệu chuẩn | `python scripts/lab.py report --code <MÃ CHUNG>` | |
-| Vẽ cuboid lên ảnh camera | `python scripts/lab.py preview` | `make preview` |
-| Soát cuboid bằng point cloud | `python scripts/lab.py selfcheck` | `make selfcheck` |
-| Ba lệnh report, preview, selfcheck liền nhau | `python scripts/lab.py sync` | `make sync` |
-| Nén ảnh chụp để nộp LMS | `python scripts/lab.py pack` | `make pack` |
-| Kiểm bài nộp | `python scripts/check_submission.py` | `make check` |
+| Việc                                                                                | Lệnh (cả hai hệ điều hành)                    | Lệnh tắt macOS   |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------- | ------------------ |
+| Xem 10 frame, kiểm dữ liệu, không nối CVAT                                      | `python scripts/lab.py dry`                       | `make dry`       |
+| Tạo task `D13-<MÃ SỐ>`                                                          | `python scripts/lab.py task`                      | `make task`      |
+| Tạo task chung của vòng hiệu chuẩn                                              | `python scripts/lab.py task --code <MÃ CHUNG>`   |                    |
+| Đóng gói 10 frame để tạo task bằng tay ([CVAT_SETUP.md](CVAT_SETUP.md) mục 7) | `python scripts/lab.py bundle`                    | `make bundle`    |
+| Xuất bảng A                                                                        | `python scripts/lab.py report`                    | `make report`    |
+| Xuất bảng A của vòng hiệu chuẩn                                                | `python scripts/lab.py report --code <MÃ CHUNG>` |                    |
+| Vẽ cuboid lên ảnh camera                                                          | `python scripts/lab.py preview`                   | `make preview`   |
+| Soát cuboid bằng point cloud                                                       | `python scripts/lab.py selfcheck`                 | `make selfcheck` |
+| Ba lệnh report, preview, selfcheck liền nhau                                       | `python scripts/lab.py sync`                      | `make sync`      |
+| Nén ảnh chụp để nộp LMS                                                        | `python scripts/lab.py pack`                      | `make pack`      |
+| Kiểm bài nộp                                                                      | `python scripts/check_submission.py`              | `make check`     |
 
 Windows không có `make`: dùng cột giữa. Mã chung mặc định là `HC485087` ([../GUIDE.md](../GUIDE.md) Bước 1), trừ khi coach phát mã khác.
 
@@ -167,10 +167,10 @@ Lưu ảnh **thẳng vào** `report/individual/images/` của repo, đặt tên 
 
 **Windows 11, làm một lần trước ảnh đầu tiên:** mở Snipping Tool → **···** → **Settings**, tắt **Automatically save screenshots** (bản mới ghi *Automatically save original screenshots*). Để bật thì mỗi lần `Win + Shift + S` máy lưu ngay một bản vào Pictures\Screenshots, và máy sao lưu Pictures lên OneDrive sẽ tải ảnh camera lên mây trước khi bạn kịp xoá.
 
-| | Chụp một vùng | Lưu ở đâu |
-|---|---|---|
-| Windows | `Win + Shift + S`, kéo chọn vùng | Bấm vào thông báo để mở Snipping Tool → **Save as** → chọn thư mục `report\individual\images` của repo. Lỡ đã có bản trong Pictures\Screenshots (chưa tắt tự lưu ở trên) thì xoá, rồi xoá cả trong thùng rác của OneDrive |
-| macOS | `Cmd + Shift + 5` → **Options** → **Other Location…** → chọn thư mục `report/individual/images` của repo (chỉ cần chọn một lần); rồi chụp vùng | Thư mục đã chọn |
+|         | Chụp một vùng                                                                                                                                                               | Lưu ở đâu                                                                                                                                                                                                                                                     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Windows | `Win + Shift + S`, kéo chọn vùng                                                                                                                                          | Bấm vào thông báo để mở Snipping Tool → **Save as** → chọn thư mục `report\individual\images` của repo. Lỡ đã có bản trong Pictures\Screenshots (chưa tắt tự lưu ở trên) thì xoá, rồi xoá cả trong thùng rác của OneDrive |
+| macOS   | `Cmd + Shift + 5` → **Options** → **Other Location…** → chọn thư mục `report/individual/images` của repo (chỉ cần chọn một lần); rồi chụp vùng | Thư mục đã chọn                                                                                                                                                                                                                                              |
 
 Mở thư mục ảnh:
 
